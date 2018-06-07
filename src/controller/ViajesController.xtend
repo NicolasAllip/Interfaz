@@ -62,7 +62,10 @@ class ViajesController {
 			if (body === null || body.trim.equals("")) {
 				return badRequest("Faltan datos usuario")
 			}			
+			println(body)
+			
 			val nuevoUser = body.fromJson(Usuario)
+			println("HOLA")
 			nuevoUser.validar 
 			repoUsuarios.validarUsuariosDuplicados(nuevoUser) 
 			
